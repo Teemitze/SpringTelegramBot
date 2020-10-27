@@ -1,0 +1,28 @@
+telegram-bot:
+  name: "Anna"
+  token: "token"
+trello:
+  token: "token"
+  api-key: "key"
+youtube:
+  api-key: "key"
+pocket:
+  token: "token"
+  api-key: "key"
+feign:
+  client:
+    config:
+      trello:
+        loggerLevel: full
+      youtube:
+        loggerLevel: full
+      pocket:
+        loggerLevel: full
+      courseHunter:
+        loggerLevel: full
+logging:
+  level:
+    tgbot: debug
+  pattern:
+    console: "%clr(%d{yy-MM-dd E HH:mm:ss.SSS}){blue} %clr(%-5p) %clr(---){faint} %clr([%.30t]){cyan} %clr(%.40logger{16}){blue}%clr(:){red} %clr(%replace([TraceId=%X{X-B3-TraceId}] ){'\\[TraceId=\\] ', ''}){green}%clr(%m){faint}%n"
+
